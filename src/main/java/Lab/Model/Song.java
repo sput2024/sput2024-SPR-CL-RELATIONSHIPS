@@ -13,15 +13,18 @@ import javax.persistence.*;
  * song.getAlbum().
  */
 @Entity
+
 //For the sake of brevity, the following 4 annotations tell Lombok to generate boilerplate code at compile-time.
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Data
 public class Song {
     //The GeneratedValue annotation allows for Spring to automatically generate a unique ID.
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private long songId;
     private String title;
     /**
